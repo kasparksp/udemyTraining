@@ -20,7 +20,7 @@ func factorial(n int) chan int {
 	}()
 
 	go func() {
-		var total int = 1
+		var total = 1
 		for i := n; i > 0; i-- {
 			total *= <-list
 		}
